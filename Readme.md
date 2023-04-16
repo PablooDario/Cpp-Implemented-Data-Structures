@@ -1,4 +1,4 @@
-![Banner](../Banner.png)
+![Banner](Banner.png)
 
 # History and Motivation
 
@@ -25,9 +25,12 @@ In order to understand the implementation you have to study the library file and
 
 If you want to use a structure just download the library and in the same folder create a cpp code including that library **(#include "structure.h")**, use the cpp files as a guide.
 
+In some data structures I added some functions/methods that arent used in a normal program, just in an specific program; but I added just to see how they can be implemented.
+
 # Short explanation of each Structure and its complexity
 
-## Linked List / Double Linked List / Circular List
+# 1 Linear Structures
+## 1.1 Linked List / Double Linked List / Circular List
 
 **Linked List**
 Serially Connected Nodes consisting of 2 fields:
@@ -73,7 +76,7 @@ The only difference between a linked list and a circular list is that in the lin
 |Pop Back       |    `O(n)`     |
 |Erase by index |    `O(n)`     |
 
-## Stack
+## 1.2 Stack
 Serially Connected Nodes consisting of 2 fields: 
 - Data 
 - A pointer to the next node
@@ -102,7 +105,7 @@ This structure follows the LIFO rule (*Last In First Out*). You can only insert 
 |Print    |    `O(n)`     |
 |Clear    |    `O(n)`     |
 
-## Queue
+## 1.3 Queue
 Serially Connected Nodes consisting of 2 fields: 
 - Data 
 - A pointer to the next node
@@ -131,7 +134,7 @@ This structure follows the FIFO rule (*First In First Out*). You can only insert
 |Print    |    `O(n)`     |
 |Clear    |    `O(n)`     |
 
-## Deque
+## 1.4 Deque
 Serially Connected Nodes consisting of 2 fields: 
 - Data 
 - A pointer to the next node
@@ -158,4 +161,128 @@ This structure is a double ended queue, despite beig a queue, it doesn`t follows
 |Print          |    `O(n)`     |
 |Front          |    `O(1)`     |
 |Back           |    `O(1)`     |
+|Clear          |    `O(n)`     |
+
+# 2 Trees
+
+Connected Nodes consisting of 3 fields: 
+- Data 
+- A pointer to the left child
+- A pointer to the right child
+
+Tress are useful for O(log2 (n)) operations, despite this, binary tree and full binary tree operations have linear complexities, because they are general trees and their implementation is tedious; the benefits come in trees with more specific functionalities, such as AVL or heap. 
+
+## 2.1 Binary Tree
+
+This structure consits in nodes with at most 2 childs per node parent, beacuse of this, it is no longer a linear structure.
+
+**Disclaimer**: in this implementation repeated data is not allowed. The implementation is a bit confusing because it was made with the object oriented paradigm and we must be very specific where we want to place the node, in the other trees the implementation is much simpler and easier to understand. 
+
+Due to this difficult implementation, some operations increase the complexity, in order to have a better understanding I will put the complexity of the operations that I implemented
+
+**Complexity**
+|Operation      |Time Complexity|
+|      ---      |      ---      |
+|Insert         |    `O(n)`     |
+|Level of a node|    `O(n)`     |
+|Tree Height    |    `O(1)`     |
+|Find           |    `O(n)`     |
+|Delete         |    `O(n)`     |
+|Deepest Node   |    `O(n)`     |
+|Clear          |    `O(n)`     |
+|Traverse Tree  |    `O(n)`     |
+
+## 2.2 Complete Binary Tree
+
+This structure consits in nodes with at most 2 childs per node parent, the difference between a normal Binary Tree, is that here you can not insert the nodes where you want, the nodes are added to the leftmost parent node that has an empty child.
+
+Due to this you dont have to worry about where the node goes, yo just push; the same for delete a node, the node that you delete is the deepest or the last adde.
+
+**Disclaimer**: in this implementation repeated data is not allowed.
+
+**Complexity**
+|Operation      |Time Complexity|
+|      ---      |      ---      |
+|Insert         |    `O(n)`     |
+|Print          |    `O(n)`     |
+|Find           |    `O(n)`     |
+|Delete         |    `O(n)`     |
+|Deepest Node   |    `O(n)`     |
+|Clear          |    `O(n)`     |
+|Traverse Tree  |    `O(n)`     |
+
+## 2.2 Complete Binary Tree
+
+This structure consits in nodes with at most 2 childs per node parent, the difference between a normal Binary Tree, is that here you can not insert the nodes where you want, the nodes are added to the leftmost parent node that has an empty child.
+
+Due to this you dont have to worry about where the node goes, yo just push; the same for delete a node, the node that you delete is the deepest or the last adde.
+
+**Disclaimer**: in this implementation repeated data is not allowed.
+
+**Complexity**
+|Operation      |Time Complexity|
+|      ---      |      ---      |
+|Insert         |    `O(n)`     |
+|Print          |    `O(n)`     |
+|Find           |    `O(n)`     |
+|Delete         |    `O(n)`     |
+|Deepest Node   |    `O(n)`     |
+|Clear          |    `O(n)`     |
+
+## 2.3 Binary Search Tree
+
+This structure consits in nodes with at most 2 childs per node parent, where the leftchild is less than its parent and the right child is greater than its parent. This tree is used to order the nodes depending on their data, which helps us for the search, also due to this order, the complexity of its operations are logarithmic (in some cases the operations are O(n), due to this AVL tree was created).
+
+**Disclaimer**: in this implementation repeated data is not allowed.
+
+**Complexity**
+|Operation      |Time Complexity|
+|      ---      |      ---      |
+|Insert         |    `O(log n)` |
+|Print          |    `O(n)`     |
+|Find           |    `O(log n)` |
+|Max / Min      |    `O(log n)` |
+|Delete         |    `O(log n)` |
+|Empty          |    `O(1)`     |
+|Clear          |    `O(n)`     |
+|Traverse Tree  |    `O(n)`     |
+
+## 2.4 AVL
+
+This structure consits in nodes with at most 2 childs per node parent. An AVL tree is a Binary Search Tree, so it has all the properties of this one, with the exception that the AVL tree is a strictly self-balancing tree  through rotations.
+
+Due to this all the insertions, deletions and searchs are logaritmic even in the worst case.
+
+**Disclaimer**: in this implementation repeated data is not allowed.
+
+**Complexity**
+|Operation      |Time Complexity|
+|      ---      |      ---      |
+|Insert         |    `O(log n)` |
+|Print          |    `O(n)`     |
+|Find           |    `O(log n)` |
+|Max / Min      |    `O(log n)` |
+|Delete         |    `O(log n)` |
+|Empty          |    `O(1)`     |
+|Clear          |    `O(n)`     |
+|Traverse Tree  |    `O(n)`     |
+
+## 2.5 Min Heap/ Max Heap / Priority Queue
+
+This structure consits in nodes with at most 2 childs per node parent. A Min heap is used to order the data, where the node parent is less than its children, so we can infer the root is the minimun node in all the tree. The same happen with the Max Heap, only instead of being the minimun is the maximun.
+
+Despite being a tree, the implementation is with an array or vector.
+Since the heap is used for Priority Queues, I implemented these Heaps as Priority Queues, but the operations are essentially the same; the only difference is that in a priority queue only the front node can be removed.
+
+**Disclaimer**: in this implementation repeated data is not allowed.
+
+**Complexity**
+|Operation      |Time Complexity|
+|      ---      |      ---      |
+|Push           |    `O(log n)` |
+|Pop            |    `O(log n)` |
+|Top            |    `O(1)`     |
+|Size           |    `O(1)`     |
+|Empty          |    `O(1)`     |
+|Print          |    `O(n)`     |
 |Clear          |    `O(n)`     |
