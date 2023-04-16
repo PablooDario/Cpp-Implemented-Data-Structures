@@ -1,6 +1,7 @@
 //This tree doesnt accept repeated values
 
-//In a normal Binary Tree you have to insert the values manually because the computer doesn´t know where to put the node; so you have to pass the value of the new node, the level of the node father, the Position of that node in that level and if you want to insert a lef or right child
+//In a normal Binary Tree you have to insert the values manually because the computer doesn´t know where to put the node; so you have to pass the value of the new node, 
+//the level of the node father, the Position of that node in that level and if you want to insert a lef or right child
 
 //To insert values in a Binary Tree, first you have to create the root
 
