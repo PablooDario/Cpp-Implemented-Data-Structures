@@ -1,20 +1,41 @@
-![Banner](Banner.png)
+<img src="./Banner.png" alt="Banner">
 
+- [ Description and Motivation](#Hist)
+- [ Contribution/Comments ](#Cont)
+- [ Requirements](#Req)
+- [ User Instructions ](#Inst)
+- [ Short explanation of each Structure and its complexity ](#Short)
+- [ 1 Linear Structrures ](#Linear)
+    - [ 1.1 Linked List / Double Linked List / Circular List](#Linked)
+    - [ 1.2 Stack](#Stack)
+    - [ 1.3 Queue](#Queue)
+    - [ 1.4 Deque](#Deque)
+- [ 2 Trees](#Trees)
+    - [ 2.1 Binary Trees](#Bin)
+    - [ 2.2 Complete Binary Tree](#CBT)
+    - [ 2.3 Binary Search Tree](#BST)
+    - [ 2.4 AVL Tree](#AVL)
+    - [ 2.4 Heap/Priority Queue](#Heap)
+
+<a id="Hist"></a>
 # History and Motivation
 
 I created this project when I was in my first year of college to understand the background and how data structures really work, because I think that to really learn new things we should know how they work behind scenes and not just memorize the code.
 
 So 1 year later I decided to create this repository, beacuse I think this project can help people, like it helped me, to understand the implementation of many Data Structures, and improve their understanding when using Data Structures.
 
+<a id="Cont"></a>
 # Contribution/Comments
 
 I know there are many ways of implementation and surely there are better than mine, but as I said, I created this project when I was in the first year of my college and I tried make it as good as possible; so if you found a bug, a way to improve or want to contribute, feel free to comment or pull request.
 
+<a id="Req"></a>
 # Requirements
 - Know c++
 - Know the basics of OOP
 - Know what each structure is for
 
+<a id="Inst"></a>
 # User Instructions
 
 All the data structures where implemented in C++; for a better order, a folder was given to each structure, which has 2 files each one: 
@@ -27,9 +48,13 @@ If you want to use a structure just download the library and in the same folder 
 
 In some data structures I added some functions/methods that arent used in a normal program, just in an specific program; but I added just to see how they can be implemented.
 
+<a id="Short"></a>
 # Short explanation of each Structure and its complexity
 
+<a id="Linear"></a>
 # 1 Linear Structures
+
+<a id="Linked"></a>
 ## 1.1 Linked List / Double Linked List / Circular List
 
 **Linked List**
@@ -76,6 +101,7 @@ The only difference between a linked list and a circular list is that in the lin
 |Pop Back       |    `O(n)`     |
 |Erase by index |    `O(n)`     |
 
+<a id="Stack"></a>
 ## 1.2 Stack
 Serially Connected Nodes consisting of 2 fields: 
 - Data 
@@ -105,6 +131,7 @@ This structure follows the LIFO rule (*Last In First Out*). You can only insert 
 |Print    |    `O(n)`     |
 |Clear    |    `O(n)`     |
 
+<a id="Queue"></a>
 ## 1.3 Queue
 Serially Connected Nodes consisting of 2 fields: 
 - Data 
@@ -134,6 +161,7 @@ This structure follows the FIFO rule (*First In First Out*). You can only insert
 |Print    |    `O(n)`     |
 |Clear    |    `O(n)`     |
 
+<a id="Deque"></a>
 ## 1.4 Deque
 Serially Connected Nodes consisting of 2 fields: 
 - Data 
@@ -163,6 +191,7 @@ This structure is a double ended queue, despite beig a queue, it doesn`t follows
 |Back           |    `O(1)`     |
 |Clear          |    `O(n)`     |
 
+<a id="Trees"></a>
 # 2 Trees
 
 Connected Nodes consisting of 3 fields: 
@@ -172,6 +201,7 @@ Connected Nodes consisting of 3 fields:
 
 Tress are useful for O(log2 (n)) operations, despite this, binary tree and full binary tree operations have linear complexities, because they are general trees and their implementation is tedious; the benefits come in trees with more specific functionalities, such as AVL or heap. 
 
+<a id="Bin"></a>
 ## 2.1 Binary Tree
 
 This structure consits in nodes with at most 2 childs per node parent, beacuse of this, it is no longer a linear structure.
@@ -192,11 +222,12 @@ Due to this difficult implementation, some operations increase the complexity, i
 |Clear          |    `O(n)`     |
 |Traverse Tree  |    `O(n)`     |
 
+<a id="CBT"></a>
 ## 2.2 Complete Binary Tree
 
 This structure consits in nodes with at most 2 childs per node parent, the difference between a normal Binary Tree, is that here you can not insert the nodes where you want, the nodes are added to the leftmost parent node that has an empty child.
 
-Due to this you dont have to worry about where the node goes, yo just push; the same for delete a node, the node that you delete is the deepest or the last adde.
+Due to this you dont have to worry about where the node goes, yo just push; the same for delete a node, the node that you delete is the deepest or the last added.
 
 **Disclaimer**: in this implementation repeated data is not allowed.
 
@@ -211,24 +242,7 @@ Due to this you dont have to worry about where the node goes, yo just push; the 
 |Clear          |    `O(n)`     |
 |Traverse Tree  |    `O(n)`     |
 
-## 2.2 Complete Binary Tree
-
-This structure consits in nodes with at most 2 childs per node parent, the difference between a normal Binary Tree, is that here you can not insert the nodes where you want, the nodes are added to the leftmost parent node that has an empty child.
-
-Due to this you dont have to worry about where the node goes, yo just push; the same for delete a node, the node that you delete is the deepest or the last adde.
-
-**Disclaimer**: in this implementation repeated data is not allowed.
-
-**Complexity**
-|Operation      |Time Complexity|
-|      ---      |      ---      |
-|Insert         |    `O(n)`     |
-|Print          |    `O(n)`     |
-|Find           |    `O(n)`     |
-|Delete         |    `O(n)`     |
-|Deepest Node   |    `O(n)`     |
-|Clear          |    `O(n)`     |
-
+<a id="BST"></a>
 ## 2.3 Binary Search Tree
 
 This structure consits in nodes with at most 2 childs per node parent, where the leftchild is less than its parent and the right child is greater than its parent. This tree is used to order the nodes depending on their data, which helps us for the search, also due to this order, the complexity of its operations are logarithmic (in some cases the operations are O(n), due to this AVL tree was created).
@@ -247,7 +261,8 @@ This structure consits in nodes with at most 2 childs per node parent, where the
 |Clear          |    `O(n)`     |
 |Traverse Tree  |    `O(n)`     |
 
-## 2.4 AVL
+<a id="AVL"></a>
+## 2.4 AVL Tree
 
 This structure consits in nodes with at most 2 childs per node parent. An AVL tree is a Binary Search Tree, so it has all the properties of this one, with the exception that the AVL tree is a strictly self-balancing tree  through rotations.
 
@@ -267,6 +282,7 @@ Due to this all the insertions, deletions and searchs are logaritmic even in the
 |Clear          |    `O(n)`     |
 |Traverse Tree  |    `O(n)`     |
 
+<a id="Heap"></a>
 ## 2.5 Min Heap/ Max Heap / Priority Queue
 
 This structure consits in nodes with at most 2 childs per node parent. A Min heap is used to order the data, where the node parent is less than its children, so we can infer the root is the minimun node in all the tree. The same happen with the Max Heap, only instead of being the minimun is the maximun.
