@@ -1,5 +1,4 @@
-<img src="./Banner.png" alt="Banner">
-
+# Table of Contents
 - [ Description and Motivation](#Hist)
 - [ Contribution/Comments ](#Cont)
 - [ Requirements](#Req)
