@@ -1,6 +1,4 @@
 # Table of Contents
-- [ Description and Motivation](#Hist)
-- [ Contribution/Comments ](#Cont)
 - [ Requirements](#Req)
 - [ User Instructions ](#Inst)
 - [ Short explanation of each Structure and its complexity ](#Short)
@@ -17,35 +15,28 @@
     - [ 2.4 Heap/Priority Queue](#Heap)
 
 <a id="Hist"></a>
-# History and Motivation
 
-I created this project when I was in my first year of college to understand the background and how data structures really work, because I think that to really learn new things we should know how they work behind scenes and not just memorize the code.
+I started this project in my first year of college to get a deeper understanding of how data structures actually work. I believe that to truly learn something, you need to understand the underlying mechanics, not just memorize the code.
 
-So 1 year later I decided to create this repository, beacuse I think this project can help people, like it helped me, to understand the implementation of many Data Structures, and improve their understanding when using Data Structures.
-
-<a id="Cont"></a>
-# Contribution/Comments
-
-I know there are many ways of implementation and surely there are better than mine, but as I said, I created this project when I was in the first year of my college and I tried make it as good as possible; so if you found a bug, a way to improve or want to contribute, feel free to comment or pull request.
+A year later, I decided to share it through this repository because I think it can help others, just like it helped me, to better grasp the implementation of various data structures and improve their overall understanding when working with them.
 
 <a id="Req"></a>
 # Requirements
 - Know c++
 - Know the basics of OOP
-- Know what each structure is for
 
 <a id="Inst"></a>
 # User Instructions
 
-All the data structures where implemented in C++; for a better order, a folder was given to each structure, which has 2 files each one: 
-- The library: that has all the implementation
-- An example code: that has an example of how to use the structure. U can use it as a guide to create your own program using that structure. 
+All the data structures are implemented in C++, and to keep things organized, each structure has its own folder. Each folder contains two files:
 
-In order to understand the implementation you have to study the library file and then read the complexity table, which is below.
+The library: This file includes the full implementation of the data structure.
+The example code: This shows how to use the structure and can serve as a guide for creating your own programs.
+To understand the implementation, start by studying the library file, then check the complexity table provided below.
 
-If you want to use a structure just download the library and in the same folder create a cpp code including that library **(#include "structure.h")**, use the cpp files as a guide.
+If you want to use a structure, simply download the library, and in the same folder, create a .cpp file that includes the library like this: #include "structure.h". You can use the example .cpp files as a reference for how to implement it.
 
-In some data structures I added some functions/methods that arent used in a normal program, just in an specific program; but I added just to see how they can be implemented.
+In some cases, I've added extra functions or methods that aren't typically used in standard programs, but I included them to show how they can be implemented in certain scenarios.
 
 <a id="Short"></a>
 # Short explanation of each Structure and its complexity
